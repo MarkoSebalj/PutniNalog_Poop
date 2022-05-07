@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="IppDotNetSdkForQuickBooksApiV3" Version="14.6.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.4" />
+    <PackageReference Include="Npgsql.Json.NET" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Model.PN\Model.PN.csproj" />
+    <ProjectReference Include="..\PutniNalogDataContext.PN\PutniNalogDataContext.PN.csproj" />
+    <ProjectReference Include="..\RestClient.PN\RestClient.PN.csproj" />
+  </ItemGroup>
+
+</Project>
