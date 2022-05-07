@@ -12,10 +12,10 @@ namespace PutniNalogDataContext.PN.Database
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(@"Host=localhost;Port=5432;Database=PN;Username=postgres; Password=5526");
+            //optionsBuilder.UseNpgsql(@"Host=localhost;Port=5432;Database=PN;Username=postgres; Password=forever8");
         }
 
-        public PNDbContext()
+        public PNDbContext(DbContextOptions<PNDbContext> options) : base(options)
         {
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
