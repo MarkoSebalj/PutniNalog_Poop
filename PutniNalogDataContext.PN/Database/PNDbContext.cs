@@ -20,6 +20,10 @@ namespace PutniNalogDataContext.PN.Database
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
+        public PNDbContext()
+        {
+        }
+
         public DbSet<MjestoPutovanja>? MjestoPutovanja { get; set; }
         public DbSet<PutniNalog>? PutniNalog { get; set; }
         public DbSet<PutniTroskovi>? PutniTroskovi { get; set; }

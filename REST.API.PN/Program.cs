@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PNDbContext>(
-        options => options.UseNpgsql("Host=localhost;Port=5432;Database=PN;Username=postgres; Password=forever8"));
+        options => options.UseNpgsql("Host=localhost;Port=5432;Database=PN;Username=postgres; Password=5526"));
 
 var app = builder.Build();
 
