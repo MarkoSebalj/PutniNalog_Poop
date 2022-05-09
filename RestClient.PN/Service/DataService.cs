@@ -14,8 +14,13 @@ namespace RestClient.PN.Service
 
         private static readonly DataService instance = new DataService();
         public static RestClient<Zaposlenik> zaposlenikRestClient { get; set; }
-        //public static BankAccountRestClient<BankAccount> bankAccountRestClient { get; set; }
-        //public static RestClient<BankAccountType> bankAccountTypeRestClient { get; set; }
+        public static RestClient<VrstaTroska> vrstaTroskaRestClient { get; set; }
+        public static RestClient<Vozilo> voziloRestClient { get; set; }
+        public static RestClient<RadnoMjesto> radnoMjestoRestClient { get; set; }
+        public static RestClient<PutniTroskovi> putniTroskoviRestClient  { get; set; }
+        public static RestClient<PutniNalog> putniNalogRestClient { get; set; }
+        public static RestClient<MjestoPutovanja> mjestoPutovanjaRestClient { get; set; }
+
 
         private DataService()
         {
@@ -32,8 +37,13 @@ namespace RestClient.PN.Service
         public static void Initialize()
         {
             zaposlenikRestClient = new RestClient<Zaposlenik>("Zaposlenik");
-            //bankAccountRestClient = new BankAccountRestClient<BankAccount>("BankAccount");
-            //bankAccountTypeRestClient = new RestClient<BankAccountType>("BankAccountType");
+            vrstaTroskaRestClient = new RestClient<VrstaTroska>("Vrsta Troška");
+            voziloRestClient = new RestClient<Vozilo>("Vozilo");
+            radnoMjestoRestClient = new RestClient<RadnoMjesto>("Radno Mjesto");
+            putniTroskoviRestClient = new RestClient<PutniTroskovi>("Putni Troškovi");
+            putniNalogRestClient = new RestClient<PutniNalog>("Putni Nalog");
+            mjestoPutovanjaRestClient = new RestClient<MjestoPutovanja>("Mjesto Putovanja");
+           
         }
 
     }
